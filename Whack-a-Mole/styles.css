@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 606px;
+    height: 606px;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border: 1px solid white;
+}
+
+.mole {
+    background-color: blue;
+}
