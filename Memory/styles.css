@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color: purple
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3em;
+}
+
+#grid {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
