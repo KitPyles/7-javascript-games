@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color: black;
+    color: purple;
+    font-family: Poppins, sans-serif;
+}
+
+button {
+
+}
+
+h1 {
+    text-align: center;
+}
+
+#grid {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 606px;
+    height: 606px;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border: 1px solid white;
+}
+
+.mole {
+    background-image: url("/Whack-a-Mole/mole.svg");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
