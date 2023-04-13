@@ -4,6 +4,7 @@ const resultDisplay = document.getElementById("result");
 const possibleChoices = document.querySelectorAll("button");
 const userWins = document.getElementById("userTotalWins");
 const computerWins = document.getElementById("computerTotalWins");
+const noWins = document.getElementById("drawChoice");
 let userChoice;
 let computerChoice;
 let result;
@@ -11,6 +12,7 @@ let computer = "Computer Wins!";
 let user = "User Wins!";
 let userTotal = 0;
 let computerTotal = 0;
+let drawTotal = 0;
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener("click", function(event) {
     userChoice = event.target.id;
@@ -97,7 +99,10 @@ function getResult() {
         userTotal++;
     } else if (result.includes(computer)) {
         computerTotal++;
+    } else if (result === "It's a Draw!") {
+        drawTotal++;
     }
-    userWins.innerHTML = userTotal;
-    computerWins.innerHTML = computerTotal;
+    userWins.innerHTML = userTotal.toString();
+    computerWins.innerHTML = computerTotal.toString();
+    noWins.innerHTML = drawTotal.toString();
 }

@@ -6,8 +6,38 @@ body {
     font-family: Poppins, sans-serif;
 }
 
-button {
+.rpsls {
+    width: 15%;
+    text-align: center;
+}
 
+#left-half {
+    width: 45%;
+    text-align: left;
+}
+
+button {
+    background-color: purple;
+    border: 0 solid mediumpurple;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    padding: .75rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #ffffff solid;
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 460px;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 h1 {

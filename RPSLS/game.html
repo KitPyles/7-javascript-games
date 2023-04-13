@@ -6,19 +6,42 @@
         <link rel="stylesheet" href="../styles.css">
     </head>
     <body>
-        <h2>Computer Choice: <span id="computer-choice"></span></h2>
-        <h2>User Choice: <span id="user-choice"></span></h2>
+        <table style="width: 100%">
+            <tr>
+                <td id="left-half">
+                    <h2>Your Choice: <span id="user-choice"></span></h2>
+                </td>
+                <td>
+                    <h2>Computer Choice: <span id="computer-choice"></span></h2>
+                </td>
+            </tr>
+        </table>
         <h2>Result: <span id="result"></span></h2>
 
-<!--        <button id="rock">rock</button>-->
-        <button id="rock">rock</button>
-        <button id="paper">paper</button>
-        <button id="scissors">scissors</button>
-        <button id="lizard">lizard</button>
-        <button id="Spock">Spock</button>
+        <table>
+            <tr>
+                <td class="rpsls"><img src="media/rock.svg" alt="rock" /></td>
+                <td class="rpsls"><img src="media/paper.svg" alt="paper" /></td>
+                <td class="rpsls"><img src="media/scissors.svg" alt="scissors" /></td>
+                <td class="rpsls"><img src="media/lizard.svg" alt="lizard" /></td>
+                <td class="rpsls"><img src="media/spock.svg" alt="Spock" /></td>
+            </tr>
+            <tr>
+                <td class="rpsls"><button id="rock">rock</button></td>
+                <td class="rpsls"><button id="paper">paper</button></td>
+                <td class="rpsls"><button id="scissors">scissors</button></td>
+                <td class="rpsls"><button id="lizard">lizard</button></td>
+                <td class="rpsls"><button id="Spock">Spock</button></td>
+            </tr>
+        </table>
 
-        <h2>User Total Wins: <span id="userTotalWins">0</span></h2>
-        <h2>User Total Losses: <span id="computerTotalWins">0</span></h2>
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 33%"><h2>Total Wins: <span id="userTotalWins">0</span></h2></td>
+                <td style="width: 33%"><h2>Total Draws: <span id="drawChoice">0</span> </h2></td>
+                <td><h2>Total Losses: <span id="computerTotalWins">0</span></h2></td>
+            </tr>
+        </table>
 
         <script src="rpsls.js" charset="utf-8"></script>
     </body>
