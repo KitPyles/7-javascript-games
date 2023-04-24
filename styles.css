@@ -81,6 +81,14 @@ h1 {
     background-color: green;
 }
 
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: red;
+}
+
 .square {
     height: 200px;
     width: 200px;
