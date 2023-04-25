@@ -12,6 +12,7 @@ let ballCurrent = ballStart
 let timerId
 let xDirection = 2
 let yDirection = 2
+let score = 0
 
 class Block {
     constructor(xAxis, yAxis) {
@@ -113,12 +114,38 @@ function checkForCollisions() {
     if (ballCurrent[0] >= (boardWidth - ballDiameter) || ballCurrent[0] <= 0 || ballCurrent[1] >= (boardHeight - ballDiameter)) {
         changeDirection()
     }
-
 //     check for game over
     if (ballCurrent[1] <= 0) {
         clearInterval(timerId)
-        scoreDisplay.innerHTML = "You lose."
+        scoreDisplay.innerHTML = `You lose. Your final score was: ${score}.`
         document.removeEventListener('keydown', moveUser)
+    }
+//     check for blocks
+    for (let i = 0; i < blocks.length; i++) {
+        if (
+            (ballCurrent[0] > blocks[i].bottomLeft[0] && ballCurrent[0] < blocks[i].bottomRight[0]) &&
+            (ballCurrent[1] + ballDiameter > blocks[i].bottomLeft[1] && ballCurrent[1] < blocks[i].topLeft[1])
+        ) {
+            const allBlocks = Array.from(document.querySelectorAll('.block'))
+            allBlocks[i].classList.remove('block')
+            blocks.splice(i, 1)
+            score += 10
+            scoreDisplay.innerHTML = score
+            changeDirection()
+
+            if (blocks.length === 0) {
+                clearInterval(timerId)
+                scoreDisplay.innerHTML = `You WIN! Your final score was: ${score}.`
+                document.removeEventListener('keydown', moveUser)
+            }
+        }
+    }
+//     check for user
+    if (
+        (ballCurrent[0] > userCurrent[0] && ballCurrent[0] < userCurrent[0] + blockWidth) &&
+        (ballCurrent[1] > userCurrent[1] && ballCurrent[1] < userCurrent[1] + blockHeight)
+    ) {
+        changeDirection()
     }
 }
 
