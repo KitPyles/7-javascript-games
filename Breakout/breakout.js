@@ -1,12 +1,17 @@
 const grid = document.querySelector('.breakout-grid')
+const scoreDisplay = document.querySelector('.score')
 const blockWidth = 100
 const blockHeight = 20
 const boardWidth = 560
 const boardHeight = 300
 const userStart = [230,10]
+const ballDiameter = 20
 let userCurrent = userStart
-const ballStart = [230, 40]
+const ballStart = [270, 40]
 let ballCurrent = ballStart
+let timerId
+let xDirection = 2
+let yDirection = 2
 
 class Block {
     constructor(xAxis, yAxis) {
@@ -92,11 +97,49 @@ function drawBall() {
     ball.style.bottom = ballCurrent[1] + 'px'
 }
 
+// move ball
+function moveBall() {
+    ballCurrent[0] += xDirection
+    ballCurrent[1] += yDirection
+    drawBall()
+    checkForCollisions()
+}
 
+timerId = setInterval(moveBall, 30)
 
+//  check for collisions
+function checkForCollisions() {
+//     check for walls
+    if (ballCurrent[0] >= (boardWidth - ballDiameter) || ballCurrent[0] <= 0 || ballCurrent[1] >= (boardHeight - ballDiameter)) {
+        changeDirection()
+    }
 
+//     check for game over
+    if (ballCurrent[1] <= 0) {
+        clearInterval(timerId)
+        scoreDisplay.innerHTML = "You lose."
+        document.removeEventListener('keydown', moveUser)
+    }
+}
 
-
+function changeDirection() {
+    if (xDirection === 2 && yDirection === 2) {
+        yDirection = -2
+        return
+    }
+    if (xDirection === 2 && yDirection === -2) {
+        xDirection = -2
+        return
+    }
+    if (xDirection === -2 && yDirection === -2) {
+        yDirection = 2
+        return
+    }
+    if (xDirection === -2 && yDirection === 2) {
+        xDirection = 2
+        return
+    }
+}
 
 
 
