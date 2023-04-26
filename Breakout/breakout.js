@@ -117,7 +117,7 @@ function checkForCollisions() {
 //     check for game over
     if (ballCurrent[1] <= 0) {
         clearInterval(timerId)
-        scoreDisplay.innerHTML = `You lose. Your final score was: ${score}.`
+        scoreDisplay.innerHTML = `<h2>You lose. Your final score was: ${score}.</h2>`
         document.removeEventListener('keydown', moveUser)
     }
 //     check for blocks
@@ -130,12 +130,12 @@ function checkForCollisions() {
             allBlocks[i].classList.remove('block')
             blocks.splice(i, 1)
             score += 10
-            scoreDisplay.innerHTML = score
+            scoreDisplay.innerHTML = `<h2>Score: ${score}</h2>`
             changeDirection()
 
             if (blocks.length === 0) {
                 clearInterval(timerId)
-                scoreDisplay.innerHTML = `You WIN! Your final score was: ${score}.`
+                scoreDisplay.innerHTML = `<h2>You WIN! Your final score was: ${score}.</h2>`
                 document.removeEventListener('keydown', moveUser)
             }
         }
