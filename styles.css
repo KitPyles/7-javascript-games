@@ -89,6 +89,7 @@ h1 {
     position: absolute;
     width: 100px;
     height: 20px;
+    border-radius: 10px;
     background-color: green;
 }
 
@@ -128,10 +129,14 @@ h1 {
     background-color: chartreuse;
 }
 
-.log-left, .log-right {
+.boat-left, .boat-right {
     background-color: lightblue;
 }
 
 .car-left, .car-right {
     background-color: lightgrey;
+}
+
+.frog {
+    background-image: url("/Frogger/media/frog.svg");
 }
