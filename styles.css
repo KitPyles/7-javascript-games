@@ -64,7 +64,7 @@ h1 {
 }
 
 .mole {
-    background-image: url("/Whack-a-Mole/media/mole.svg");
+    background-image: url("/Whack-a-Mole/media/mole.svg") !important;
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: bottom;
