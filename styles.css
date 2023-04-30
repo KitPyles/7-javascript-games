@@ -103,40 +103,67 @@ h1 {
 
 .frogger-grid {
     position: relative;
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    border: 1px white solid;
-    height: 180px;
-    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px white solid;
+    border-bottom: 4px white solid;
+    height: 360px;
+    width: 360px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .frogger-grid div {
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
 }
 
 .grass {
     background-color: forestgreen;
 }
 
-.starting-block {
-    background-color: chartreuse;
-}
-
-.ending-block {
-    background-color: chartreuse;
-}
-
-.boat-left, .boat-right {
-    background-color: lightblue;
-}
-
-.car-left, .car-right {
-    background-color: lightgrey;
+.goal {
+    background-color: darkred !important;
 }
 
 .frog {
-    background-image: url("/Frogger/media/frog.svg");
+    background-image: url("/Frogger/media/frog.svg") !important;
 }
+
+.boat-left, .boat-right {
+    background-color: chartreuse;
+}
+
+.b1, .b2, .b3 {
+    background-image: url("/Frogger/media/boat-left.svg");
+    transform: scaleX(-1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.b7, .b8, .b9 {
+    background-image: url("/Frogger/media/boat-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.car-left, .car-right {
+    background-color: slategrey;
+}
+
+.car-right {
+    border-top: 1px white dashed;
+}
+
+.c1, .c3 {
+    background-image: url("/Frogger/media/car-left.svg");
+}
+
+.c7, .c10 {
+    background-image: url("/Frogger/media/car-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
