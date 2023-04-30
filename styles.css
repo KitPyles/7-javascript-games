@@ -51,6 +51,7 @@ h1 {
 
 .grid {
     display: flex;
+    margin: auto;
     flex-wrap: wrap;
     width: 606px;
     height: 606px;
@@ -63,7 +64,7 @@ h1 {
 }
 
 .mole {
-    background-image: url("/Whack-a-Mole/mole.svg");
+    background-image: url("/Whack-a-Mole/media/mole.svg");
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: bottom;
