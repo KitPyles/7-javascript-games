@@ -124,11 +124,7 @@ h1 {
 }
 
 .goal {
-    background-color: darkred !important;
-}
-
-.frog {
-    background-image: url("/Frogger/media/frog.svg") !important;
+    background-color: darkred;
 }
 
 .boat-left, .boat-right {
@@ -168,3 +164,6 @@ h1 {
     background-position: center;
 }
 
+.frog {
+    background-image: url("/Frogger/media/frog.svg") !important;
+}

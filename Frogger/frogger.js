@@ -166,7 +166,7 @@ function lose() {
         case squares[currentIndex].classList.contains('c1'):
         case squares[currentIndex].classList.contains('c3'):
         case squares[currentIndex].classList.contains('c7'):
-        case squares[currentIndex].classList.contains('c9'):
+        case squares[currentIndex].classList.contains('c10'):
             resultDisplay.innerHTML = "Oh, no! You got hit by a car!"
             clearInterval(timerId)
             clearInterval(outcomeTimerId)
@@ -184,7 +184,7 @@ function lose() {
 }
 
 function win() {
-    if (squares[currentIndex].classList.contains('ending-square')) {
+    if (squares[currentIndex].classList.contains('goal')) {
         resultDisplay.innerHTML = "You Win! Congratulations!"
         clearInterval(timerId)
         clearInterval(outcomeTimerId)
@@ -202,17 +202,7 @@ startPauseButton.addEventListener('click', () => {
     } else {
         squares[currentIndex].classList.add('frog')
         timerId = setInterval(autoMoveElements, 1000)
-        outcomeTimerId = setInterval(checkOutcome, 500)
+        outcomeTimerId = setInterval(checkOutcome, 450)
         document.addEventListener('keyup', moveFrog)
     }
 })
-
-
-
-
-
-
-
-
-
-
