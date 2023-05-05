@@ -36,3 +36,8 @@ Dev Notes:
       * Add score
         * Add 5 points for each correct match
         * Subtract 1 point for each incorrect match
+* 05/03/2023
+  * Refactor styles.css to be separate stylesheets
+    * Unifying styles in main
+      * Colors, font, font-size
+    * Individual game styles in separate files
