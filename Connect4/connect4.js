@@ -4,4 +4,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayCurrentPlayer = document.querySelector('#currentPlayer')
     let currentPlayer = 1
 
+
 })
