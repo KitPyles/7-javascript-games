@@ -169,7 +169,7 @@ h1 {
 }
 
 .connect4-grid {
-    position: relative;
+    /*position: relative;*/
     /*margin: auto;*/
     display: flex;
     flex-wrap: wrap;
