@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const result = document.querySelector('#result')
     const displayCurrentPlayer = document.querySelector('#currentPlayer')
     let currentPlayer = 1
-    const takenSq = document.querySelectorAll('.taken')
     let gameOver = false;
 
     const winningArrays = [
@@ -14,12 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
         [1,8,15,22],
         [1,9,17,25],
         [2,3,4,5],
-        [2,9,18,26],
+        [2,9,16,23],
         [2,10,18,26],
         [3,4,5,6],
         [3,9,15,21],
         [3,10,17,24],
         [3,11,19,27],
+        [4,11,18,25],
+        [5,12,19,26],
+        [6,13,20,27],
         [7,8,9,10],
         [7,14,21,24],
         [7,15,23,31],
@@ -33,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
         [10,16,22,28],
         [10,17,24,31],
         [10,18,26,34],
+        [11,18,25,32],
+        [12,19,26,33],
+        [13,20,27,34],
         [14,15,16,17],
         [14,21,28,35],
         [14,22,30,38],
@@ -46,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         [17,23,29,35],
         [17,24,31,38],
         [17,25,33,41],
+        [18,25,32,39],
+        [19,26,33,40],
+        [20,27,34,41],
         [21,22,23,24],
         [22,23,24,25],
         [23,24,25,26],
@@ -107,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const s22 = square2.classList.contains('player2')
             const s32 = square3.classList.contains('player2')
             const s42 = square4.classList.contains('player2')
+
+            const takenSq = document.querySelectorAll('.taken');
 
             if (s11 && s21 && s31 && s41) {
                 result.innerHTML = 'Player 1 wins!';
