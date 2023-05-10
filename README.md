@@ -41,3 +41,7 @@ Dev Notes:
     * Unifying styles in main
       * Colors, font, font-size
     * Individual game styles in separate files
+* 05/09/2023
+  * Consider adding AI to Connect 4 for challenging computer opponent
+  * Create simple random number generator to create a crazy computer opponent
+  * Refactor Connect4 to "drop" the token down the column to the bottom spot
