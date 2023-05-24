@@ -42,14 +42,14 @@ h1 {
     text-align: center;
 }
 
-#grid {
+#memory-grid {
     width: 600px;
     height: 300px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.grid {
+.wam-grid {
     display: flex;
     margin: auto;
     flex-wrap: wrap;
@@ -191,3 +191,39 @@ h1 {
     background-color: darkgray !important;
     border-radius: 20px;
 }
+
+.si-grid {
+    width: 600px;
+    height: 600px;
+    border: white 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.si-grid div {
+    width: 40px;
+    height: 40px;
+}
+
+.invader {
+    background-image: url("/SpaceInvaders/media/invader.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.player {
+    background-image: url("SpaceInvaders/media/player.svg");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
