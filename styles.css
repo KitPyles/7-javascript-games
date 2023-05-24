@@ -193,16 +193,17 @@ h1 {
 }
 
 .si-grid {
-    width: 600px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     border: white 1px solid;
     display: flex;
     flex-wrap: wrap;
+    background-size: cover;
 }
 
 .si-grid div {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
 }
 
 .invader {
@@ -215,7 +216,9 @@ h1 {
     background-image: url("SpaceInvaders/media/player.svg");
 }
 
-
+.shot {
+    background-image: url("SpaceInvaders/media/shot.svg");
+}
 
 
 
