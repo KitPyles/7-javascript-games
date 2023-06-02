@@ -192,41 +192,7 @@ h1 {
     border-radius: 20px;
 }
 
-.si-grid {
-    width: 300px;
-    height: 300px;
-    border: white 1px solid;
-    display: flex;
-    flex-wrap: wrap;
+#board {
+    border: 1px white solid;
     background-size: cover;
 }
-
-.si-grid div {
-    width: 20px;
-    height: 20px;
-}
-
-.invader {
-    background-image: url("/SpaceInvaders/media/invader.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.player {
-    background-image: url("SpaceInvaders/media/player.svg");
-}
-
-.shot {
-    background-image: url("SpaceInvaders/media/shot.svg");
-}
-
-
-
-
-
-
-
-
-
-
-
