@@ -11,7 +11,7 @@ let gameList = [
     '<a href="Breakout/game.html">Breakout</a>',
     '<a href="Frogger/game.html">Frogger</a>',
     '<a href="Connect4/game.html">Connect 4</a>',
-    '<a href="SpaceInvaders/game.html">Space Invaders</a>'
+    '<a href="SpaceInvaders/index.html">Space Invaders</a>'
 ]
 
 document.addEventListener("DOMContentLoaded", function () {
